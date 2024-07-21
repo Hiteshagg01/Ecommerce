@@ -1,0 +1,77 @@
+:root {
+  --color-1: #ff9900;
+  --color-2: #fceade;
+  --color-3: #f7ca00;
+  --color-4: #131921;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #eeeeee;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.content-grid {
+  --gap: clamp(1rem, 5vw, 3rem);
+  --full: minmax(var(--gap), 1fr);
+  --breakout: minmax(0, 2rem);
+
+  --content: min(1440px, 100% - var(--gap) * 2);
+
+  display: grid;
+
+  grid-template-columns:
+    [full-start] var(--full)
+    [breakout-start] var(--breakout)
+    [content-start] var(--content) [content-end]
+    var(--breakout) [breakout-end]
+    var(--full) [full-end];
+}
+
+.content-grid > * {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full {
+  grid-column: full;
+}

@@ -1,0 +1,12 @@
+#home-screen {
+    display: grid;
+    gap: 1.25rem;
+    background-color: #fff;
+}
+
+.products-list {
+    display:  grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}

@@ -1,0 +1,36 @@
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-4);
+  color: #fafafa;
+  min-height: 4rem;
+  padding-inline: 2rem;
+}
+
+#navbar span {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#navbar .navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+#navbar .navbar-link a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    color: var(--color-2);
+  }
+}
